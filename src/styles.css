@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* @keyframes animationIBF {
+  0% {
+    transform: scale(1.2, 1) translatex(-2200px);
+  }
+
+  100% {
+    transform: scale(1.2, 1) translatex(0);
+  }
+}
+@keyframes animationIB {
+  0% {
+    transform: scale(1, 0.8) translatex(-2240px);
+  }
+
+  100% {
+    transform: scale(1, 0.8) translatex(0);
+  }
+} */
