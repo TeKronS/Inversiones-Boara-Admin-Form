@@ -5,10 +5,10 @@ import { Login } from "./../pages/login/Login";
 import { Home } from "./../pages/home/Home";
 import { Error } from "./../pages/error/Error";
 import {
-  onAuthStateChangeds,
   signInWithEmailAndPasswords,
   signOuts,
   getTotalData,
+  onAuthStateChangeds,
 } from "./../firebase/firebase-config";
 import { useNavigate, useLocation } from "react-router-dom";
 

@@ -184,7 +184,12 @@ export const Home = ({ logOut, user, data }) => {
         id: e.target.parentNode.id,
       }).then((response) => {
         if (!response) {
-          data[state.section][state.subSection][e.target.parentNode.id] = item;
+          if (state.subSection) {
+            data[state.section][state.subSection][e.target.parentNode.id] =
+              item;
+          } else {
+            data[state.section][e.target.parentNode.id] = item;
+          }
           setState({ ...state });
         }
       });
