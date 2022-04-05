@@ -12,7 +12,7 @@ export const ImageComponent = ({
   color = "black",
   height = 110,
   quality = 1,
-  imgChild = []
+  imgChild = [],
 }) => {
   const [keyState, setKey] = useState(1);
   const imgElement = useRef(null);
@@ -120,8 +120,17 @@ export const ImageComponent = ({
       quality: quality,
       success(result) {
         if (isMount.current) {
-          result.name = `${time}${result.name}`;
-          UploadImage(result, childrenPosition);
+          if (result instanceof File) {
+            async function fileConvert() {
+              let newresult = await fileToBlob(result);
+              newresult.name = `${time}${result.name}`;
+              UploadImage(newresult, childrenPosition);
+            }
+            fileConvert();
+          } else {
+            result.name = `${time}${result.name}`;
+            UploadImage(result, childrenPosition);
+          }
         }
       },
       error(err) {
@@ -131,7 +140,7 @@ export const ImageComponent = ({
             imgElement.current.children[childrenPosition]
           );
         }
-      }
+      },
     });
   }
   //----------
@@ -194,12 +203,7 @@ export const ImageComponent = ({
   }
 
   //---------------------------------
-  function removeItemFromArr(arr, item) {
-    return arr.filter(function (e) {
-      return e !== item;
-    });
-  }
-  //------
+
   return (
     <SectionImg>
       <Label color={color} htmlFor={"fotos"}>
@@ -246,3 +250,16 @@ const ImageChild = () => {
     </div>
   );
 };
+
+function removeItemFromArr(arr, item) {
+  return arr.filter(function (e) {
+    return e !== item;
+  });
+}
+
+async function fileToBlob(fileResult) {
+  const blob = new Blob([new Uint8Array(await fileResult.arrayBuffer())], {
+    type: fileResult.type,
+  });
+  return blob;
+}
