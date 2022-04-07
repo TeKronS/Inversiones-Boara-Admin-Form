@@ -1,10 +1,10 @@
 const DATE_UNITS = {
-  year: 31536000,
-  month: 25920000,
+  year: 31104000,
+  month: 2592000,
   day: 86400,
   hour: 3600,
   minute: 60,
-  second: 1
+  second: 1,
 };
 
 const getSecondsDiff = (timestamp) => (Date.now() - timestamp) / 1000;
@@ -35,6 +35,6 @@ export const timeAgo = (timestamp) => {
   const formattedDate = new Intl.DateTimeFormat().format(date);
   return {
     dateTime: formattedDate,
-    timeago
+    timeago,
   };
 };
