@@ -400,11 +400,11 @@ export const Home = ({ logOut, user, data }) => {
         </>
       )}
       <BottonLogOut
-        onClick={() => {
-          //aqui se desbloquea la navegacion para poder navegar a la pagina de login
-          blockRef.current();
-          logOut();
-        }}
+      // onClick={() => {
+      //   //aqui se desbloquea la navegacion para poder navegar a la pagina de login
+      //   blockRef.current();
+      //   logOut();
+      // }} // Disabled for testing
       >
         Cerrar sesion
       </BottonLogOut>

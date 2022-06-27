@@ -12,13 +12,13 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 //-----------------------------
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBBOXriV7jlrl6HL_-W6ScnkSTNU_EHsmU",
-  authDomain: "inversiones-boara.firebaseapp.com",
-  projectId: "inversiones-boara",
-  storageBucket: "inversiones-boara.appspot.com",
-  messagingSenderId: "885001067785",
-  appId: "1:885001067785:web:ce31f136c8ffef0304c7d8",
-  measurementId: "G-BCXQGHH8CD",
+  apiKey: "AIzaSyCPj8EmFv-S2Dck1GAPJ8_bN3BzzWUkFSw",
+  authDomain: "canvas-dibujo.firebaseapp.com",
+  projectId: "canvas-dibujo",
+  storageBucket: "canvas-dibujo.appspot.com",
+  messagingSenderId: "977007089483",
+  appId: "1:977007089483:web:dc382ebee606eb111ebace",
+  measurementId: "G-8HZCMLTS45",
 };
 
 // Initialize Firebase and DataBase
