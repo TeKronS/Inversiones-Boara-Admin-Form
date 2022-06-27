@@ -9,7 +9,7 @@ export const HeaderSection = () => {
         <LogoIB />
       </Link>
       <BannerArea>
-        <h2>INVERSIONES BOARA</h2>
+        <h2>IB Admin Testing</h2>
       </BannerArea>
     </Header>
   );
