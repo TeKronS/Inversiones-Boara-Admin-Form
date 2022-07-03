@@ -5,6 +5,8 @@ import { Input, Button } from "./../styles";
 
 export const InputArragament = ({ item, setItem }) => {
   const [load, ReLoad] = useState(0);
+  const [price, setPrice] = useState("");
+
   //----------------------------------
   const imageState = useRef(item ? [] : ["null"]);
   const buttonRef = useRef(null);
@@ -14,12 +16,12 @@ export const InputArragament = ({ item, setItem }) => {
       ? {
           title: item.titulo,
           price: item.precio,
-          imgURL: [item.imagen]
+          imgURL: [item.imagen],
         }
       : {
           title: null,
           price: null,
-          imgURL: []
+          imgURL: [],
         }
   );
   //---------------------------
@@ -28,8 +30,14 @@ export const InputArragament = ({ item, setItem }) => {
     isEnableButtonNext();
   }
   function priceChanged(e) {
-    if (e.target.value >= 0) {
-      content.current.price = e.target.value;
+    const newPrice = Number(e.target.value);
+
+    if (newPrice > 0) {
+      content.current.price = newPrice;
+      setPrice(newPrice);
+    } else {
+      setPrice("");
+      content.current.price = null;
     }
     isEnableButtonNext();
   }
@@ -50,7 +58,7 @@ export const InputArragament = ({ item, setItem }) => {
     content.current = {
       title: null,
       price: null,
-      imgURL: []
+      imgURL: [],
     };
     imageState.current = ["null"];
     ReLoad(load + 1);
@@ -61,7 +69,7 @@ export const InputArragament = ({ item, setItem }) => {
       setItem({
         titulo: content.current.title,
         precio: content.current.price,
-        imagen: content.current.imgURL[0]
+        imagen: content.current.imgURL[0],
       });
       reset();
     }
@@ -100,6 +108,7 @@ export const InputArragament = ({ item, setItem }) => {
         defaultValue={content.current.price}
         id={"price"}
         onChange={priceChanged}
+        value={price}
         type={"number"}
       />
       <ImageComponent
