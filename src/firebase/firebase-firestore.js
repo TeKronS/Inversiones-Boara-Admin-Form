@@ -23,10 +23,10 @@ export const deleteItem = async ({ section, subSection, id }) => {
     const object = {};
     object[id] = deleteField();
     const docRef = doc(db, section, subSection);
-    return await updateDoc(docRef, object).then(goodDelete).catch(fail);
+    return await updateDoc(docRef, object).then(goodDelete).catch(failDelete);
   } else {
     const docRef = doc(db, section, id);
-    return await deleteDoc(docRef).then(goodDelete).catch(fail);
+    return await deleteDoc(docRef).then(goodDelete).catch(failDelete);
   }
 };
 //-----------------------------------------
@@ -41,11 +41,18 @@ function good() {
   return true;
 }
 function fail(error) {
-  var errorMessage = error.message;
+  let errorMessage = error.message;
   alert(errorMessage);
   return false;
 }
 function goodDelete() {
   alert("Articulo Eliminado");
   return true;
+}
+
+function failDelete(error) {
+  let errorMessage = error.message;
+  console.log(errorMessage);
+  alert("Opción Desabilidata para pruebas");
+  return false;
 }
