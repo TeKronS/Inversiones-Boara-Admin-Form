@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Inversiones-Boara-Admin-Form/static/css/main.de01bb0c.css",
-    "main.js": "/Inversiones-Boara-Admin-Form/static/js/main.aadc4980.js",
+    "main.js": "/Inversiones-Boara-Admin-Form/static/js/main.74b1709b.js",
     "service-worker.js": "/Inversiones-Boara-Admin-Form/service-worker.js",
     "static/media/spiner.svg": "/Inversiones-Boara-Admin-Form/static/media/spiner.62e74328a609ab2a4c304a78d80a321f.svg",
     "index.html": "/Inversiones-Boara-Admin-Form/index.html",
     "main.de01bb0c.css.map": "/Inversiones-Boara-Admin-Form/static/css/main.de01bb0c.css.map",
-    "main.aadc4980.js.map": "/Inversiones-Boara-Admin-Form/static/js/main.aadc4980.js.map"
+    "main.74b1709b.js.map": "/Inversiones-Boara-Admin-Form/static/js/main.74b1709b.js.map"
   },
   "entrypoints": [
     "static/css/main.de01bb0c.css",
-    "static/js/main.aadc4980.js"
+    "static/js/main.74b1709b.js"
   ]
 }
