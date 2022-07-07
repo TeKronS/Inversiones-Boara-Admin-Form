@@ -5,7 +5,7 @@ import { Input, Button } from "./../styles";
 
 export const InputArragament = ({ item, setItem }) => {
   const [load, ReLoad] = useState(0);
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState(item ? item.precio : "");
 
   //----------------------------------
   const imageState = useRef(item ? [] : ["null"]);
@@ -62,6 +62,7 @@ export const InputArragament = ({ item, setItem }) => {
     };
     imageState.current = ["null"];
     ReLoad(load + 1);
+    setPrice("");
   }
 
   function send() {
