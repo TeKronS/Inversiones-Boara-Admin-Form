@@ -5,7 +5,7 @@ import { LogoIB } from "./../components/LogoIB/LogoIB";
 export const HeaderSection = () => {
   return (
     <Header>
-      <Link to="/">
+      <Link to="/Inversiones-Boara-Admin-Form">
         <LogoIB />
       </Link>
       <BannerArea>

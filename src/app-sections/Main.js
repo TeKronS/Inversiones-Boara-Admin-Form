@@ -26,7 +26,7 @@ export const MainSection = () => {
     if (location.pathname === "/login") {
       navigate(location.pathname, { replace: false });
     } else {
-      navigate("/", { replace: false });
+      navigate("/Inversiones-Boara-Admin-Form", { replace: false });
     }
   }, []);
 
@@ -65,7 +65,7 @@ export const MainSection = () => {
     <Main>
       <Routes>
         <Route
-          path={"/"}
+          path={"/Inversiones-Boara-Admin-Form"}
           element={<Home logOut={logOut} user={user} data={data} />}
         />
         <Route path={"/login"} element={<Login user={user} logIn={logIn} />} />

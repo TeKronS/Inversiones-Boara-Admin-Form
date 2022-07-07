@@ -6,12 +6,12 @@ export const Error = ({ user, data }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user && data) navigate("/");
+    if (user && data) navigate("/Inversiones-Boara-Admin-Form");
   });
 
   return (
     <Body>
-      Error<a href={"/"}>Recargar</a>
+      Error<a href={"/Inversiones-Boara-Admin-Form"}>Recargar</a>
     </Body>
   );
 };

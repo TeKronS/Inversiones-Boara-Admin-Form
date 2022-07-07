@@ -10,7 +10,7 @@ export const Login = ({ logIn, user }) => {
   const { navigator } = useContext(NavigationContext);
 
   useEffect(() => {
-    if (user) navigate("/");
+    if (user) navigate("/Inversiones-Boara-Admin-Form");
   });
   useEffect(() => {
     if (user === false) {
