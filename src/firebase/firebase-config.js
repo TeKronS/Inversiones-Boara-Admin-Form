@@ -42,7 +42,7 @@ export async function getTotalData() {
   //---------------------------------
   async function getRecommended() {
     const querySnapshot = await getDocs(collection(db, SECTIONS.recomendados));
-    await querySnapshot.forEach((doc) => {
+    querySnapshot.forEach((doc) => {
       const data = doc.data();
       const id = doc.id;
       Recomendados[id] = data;
@@ -51,7 +51,7 @@ export async function getTotalData() {
   //---------------------------------
   async function getArreglos() {
     const querySnapshot1 = await getDocs(collection(db, SECTIONS.arreglos));
-    await querySnapshot1.forEach((doc) => {
+    querySnapshot1.forEach((doc) => {
       const data = doc.data();
       const id = doc.id;
       Arreglos[id] = data;
@@ -61,7 +61,7 @@ export async function getTotalData() {
   //------------------------------------
   async function getComplementos() {
     const querySnapshot2 = await getDocs(collection(db, SECTIONS.complementos));
-    await querySnapshot2.forEach((doc) => {
+    querySnapshot2.forEach((doc) => {
       const data = doc.data();
       const id = doc.id;
       Complementos[id] = data;
@@ -71,7 +71,7 @@ export async function getTotalData() {
   //---------------------------------
   async function getReseñas() {
     const querySnapshot3 = await getDocs(collection(db, SECTIONS.reseñas));
-    await querySnapshot3.forEach((doc) => {
+    querySnapshot3.forEach((doc) => {
       const data = doc.data();
       const id = doc.id;
       Reseñas[id] = data;
