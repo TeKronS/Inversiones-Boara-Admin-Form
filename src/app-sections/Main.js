@@ -16,15 +16,15 @@ export const MainSection = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [user, setUser] = useState(true); //Default Value is null
+  const [user, setUser] = useState(null); //Default Value is null
   const [data, setData] = useState(null);
 
   //-----------------------------------
   useEffect(() => {
-    // onAuthStateChangeds(setUser); // Disabled for testing
+    onAuthStateChangeds(setUser); // Disabled for testing
 
     if (location.pathname === "/login") {
-      navigate(location.pathname, { replace: false });
+      navigate("/login", { replace: false });
     } else {
       navigate("/Inversiones-Boara-Admin-Form", { replace: false });
     }

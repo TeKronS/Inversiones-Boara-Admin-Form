@@ -60,11 +60,15 @@ export const Home = ({ logOut, user, data }) => {
   });
   //este efecto bloquea la navegacion y ejecuta la funcion de ir atras del formulario
   useEffect(() => {
-    if (user) {
+    console.log(2);
+
+    if (user && data) {
+      console.log(3);
+
       blockRef.current = navigator.block(previews);
     }
-  }, [navigator, user]);
-
+  }, [navigator, user, data]);
+  console.log(1);
   function SelectSeccion(e) {
     const id = e.target.id;
     setListPrevStage();

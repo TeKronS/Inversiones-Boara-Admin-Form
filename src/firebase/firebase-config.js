@@ -128,7 +128,7 @@ export async function onAuthStateChangeds(onChange) {
     if (user) {
       onChange(true);
     } else {
-      onChange(false);
+      onChange(true); //true for test
     }
   });
 }
